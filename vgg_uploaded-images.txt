@@ -1,0 +1,82 @@
+Argument 1: uploaded_images/
+Argument 2: vgg
+Argument 3: dognames.txt
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Prints 10 filenames from folder pet_images/
+1 file: Dog_02.jpg
+2 file: Hammer_01.jpg
+3 file: Lion_01.jpg
+4 file: Dog_01.jpg
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_02.jpg  label:                        dog
+ 2 key:                  Hammer_01.jpg  label:                     hammer
+ 3 key:                    Lion_01.jpg  label:                       lion
+ 4 key:                     Dog_01.jpg  label:                        dog
+
+     MATCH:
+
+                 Hammer_01.jpg: 
+Real:                     hammer   Classifier:                         hammer
+
+                   Lion_01.jpg: 
+Real:                       lion   Classifier: lion, king of beasts, panthera leo
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:          saluki, gazelle hound
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:          saluki, gazelle hound
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+{'Dog_02.jpg': ['dog', 'saluki, gazelle hound', 0, 1, 1], 'Hammer_01.jpg': ['hammer', 'hammer', 1, 0, 0], 'Lion_01.jpg': ['lion', 'lion, king of beasts, panthera leo', 1, 0, 0], 'Dog_01.jpg': ['dog', 'saluki, gazelle hound', 0, 1, 1]}
+
+     MATCH:
+
+                 Hammer_01.jpg: 
+Real:                     hammer   Classifier:                         hammer  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                   Lion_01.jpg: 
+Real:                       lion   Classifier: lion, king of beasts, panthera leo  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:          saluki, gazelle hound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:          saluki, gazelle hound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+ Results for CNN Model Architecture VGG
+N Images: 4
+N Dog Images: 2
+N Not-Dog Images: 2
+Summary statistics in percentages on Model Run
+
+ INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:          saluki, gazelle hound
+Real:                        dog   Classifier:          saluki, gazelle hound
+
+** Total Elapsed Runtime: 0:0:3
